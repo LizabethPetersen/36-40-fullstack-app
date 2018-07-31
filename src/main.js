@@ -1,23 +1,17 @@
 import React from 'react';
 import { render as renderDom } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-import AuthForm from './components/auth-form/auth-form';
+import reducer from './reducer/main';
+import App from './components/app/app';
+import thunk from './lib/middleware/redux-thunk';
+import reporter from './lib/middleware/reporter';
+import session from './lib/middleware/session';
 
-class Test extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello, Sweetie!</h1>
-        <AuthForm 
-        type="login"
-        onComplete={console.log}
-        />
-      </div>
-    );
-  }
-}
-
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk, reporter, session)));
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-renderDom(<Test />, root);
+renderDom(<Provider store={store}><App /></Provider>, root);
