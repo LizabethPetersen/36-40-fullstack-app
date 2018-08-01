@@ -17,7 +17,7 @@ export const userSignup = user => (store) => {
     .then((response) => {
       return store.dispatch(setToken(response.body.token));
     })
-    .catch(err => console.error(err, 'error message'));
+    .catch(err => console.error(err, 'error message')); // eslint-disable-line
 };
 
 export const userLogin = user => (store) => {
