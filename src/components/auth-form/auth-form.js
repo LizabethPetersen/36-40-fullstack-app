@@ -24,17 +24,17 @@ export default class AuthForm extends React.Component {
     this.setState(emptyState);
   }
 
-  renderEmailInput = (type) => {
-    return type === 'signup' && (
-      <input
-      name="email"
-      placeholder="email"
-      type="email"
-      value={ this.state.email }
-      onChange={ this.handleChange }
-      />
-    );
-  }
+  // renderEmailInput = (type) => {
+  // return type === 'signup' && (
+  // <input
+  // name="email"
+  // placeholder="email"
+  // type="email"
+  // value={ this.state.email }
+  // onChange={ this.handleChange }
+  // />
+  // );
+  // }
 
   render() {
     let { type } = this.props;
@@ -48,9 +48,13 @@ export default class AuthForm extends React.Component {
       value={ this.state.username }
       onChange={ this.handleChange }
       />
-
-      { this.renderEmailInput.apply(type) }
-
+     <input
+      name="email"
+      placeholder="email"
+      type="email"
+      value={ this.state.email }
+      onChange={ this.handleChange }
+      />
       <input
       name="password"
       placeholder="password"

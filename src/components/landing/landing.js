@@ -22,7 +22,7 @@ class Landing extends React.Component {
       .then(() => {
         this.props.history.push(routes.DASHBOARD_ROUTE);
       })
-      .catch(console.error);
+      .catch(console.error); // eslint-disable-line
   }
 
   handleLogin = (user) => {
@@ -30,7 +30,7 @@ class Landing extends React.Component {
       .then(() => {
         this.props.history.push(routes.DASHBOARD_ROUTE);
       })
-      .catch(console.error);
+      .catch(console.error); // eslint-disable-line
   }
 
   renderJSX = (pathname) => {
