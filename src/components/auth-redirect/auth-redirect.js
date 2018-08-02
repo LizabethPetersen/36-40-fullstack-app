@@ -10,7 +10,7 @@ const mapStateToProps = store => ({
 
 class AuthRedirect extends React.Component {
   renderFinalDestination = (pathname, token) => {
-    const isRegisteredRoute = pathname === routes.SIGNUP_ROUTE || pathname === routes.LOGIN_ROUTE || pathname === routes.ROOT_ROUTE;
+    const isRegisteredRoute = pathname === routes.SIGNUP_ROUTE || pathname === routes.LOGIN_ROUTE || pathname === routes.ROOT_ROUTE || pathname === routes.PROF;
 
     if (isRegisteredRoute) {
       if (token) {
