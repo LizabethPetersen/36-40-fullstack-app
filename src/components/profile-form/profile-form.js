@@ -5,7 +5,6 @@ const emptyState = {
   firstName: '',
   lastName: '',
   bio: '',
-  profileImageUrl: '',
 };
 
 export default class ProfileForm extends React.Component {
@@ -30,22 +29,22 @@ export default class ProfileForm extends React.Component {
     const buttonText = this.props.profile ? 'Update' : 'Create';
     return (
       <form className="profile-form" onSubmit={ this.handleSubmit }>
-        <label htmlFor="first-name">First Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input
-        name="first-name"
-        value={ this.value.firstName }
+        name="firstName"
+        value={ this.state.firstName }
         onChange={ this.handleChange }
         />
-        <label htmlFor="last-name">Last Name</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
-        name="last-name"
-        value={ this.value.lastName }
+        name="lastName"
+        value={ this.state.lastName }
         onChange={ this.handleChange }
         />
         <label htmlFor="bio">Include your bio</label>
         <textarea
         name="bio"
-        value={ this.value.bio }
+        value={ this.state.bio }
         onChange={ this.handleChange }
         />
         <button type="submit">{ buttonText }</button>

@@ -7,8 +7,8 @@ import AuthForm from '../auth-form/auth-form';
 import * as authActions from '../../actions/auth';
 import * as routes from '../../lib/routes';
 
-const mapStateToProps = state => ({
-  token: state.token,
+const mapStateToProps = store => ({
+  token: store.token,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -7,8 +7,8 @@ import * as routes from '../../lib/routes';
 
 import ProfileForm from '../profile-form/profile-form';
 
-const mapStateToProps = store => ({
-  profile: store.profile,
+const mapStateToProps = state => ({
+  profile: state.profile,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -30,20 +30,20 @@ class Profile extends React.Component {
   componentDidMount() {
     this.props.fetchProfile()
       .then((response) => {
-        console.log(response, 'What is the response?');  // eslint-disable-line
+  console.log(response, 'What is the response?');  // eslint-disable-line
       })
-      .catch(console.error);  // eslint-disable-line
+  .catch(console.error);  // eslint-disable-line
   }
 
   handleCreate = (profile) => {
     this.props.createProfile(profile)
       .then(() => {
-        this.props.history.push(routes.PROFILES_ROUTE);
+        this.props.history.push(routes.PROFILE_ROUTE);
       });
   }
 
   handleUpdate = (profile) => {
-    this.props.updatedProfile(profile);
+    this.props.updateProfile(profile);
     this.setState({ editing: false });
   };
 
@@ -90,7 +90,7 @@ class Profile extends React.Component {
 Profile.propTypes = {
   profile: PropTypes.object,
   createProfile: PropTypes.func,
-  updatedProfile: PropTypes.func,
+  updateProfile: PropTypes.func,
   fetchProfile: PropTypes.func,
   history: PropTypes.object,
 };

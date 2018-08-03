@@ -26,7 +26,7 @@ class Navbar extends React.Component {
     const JSXLoggedIn = // eslint-disable-line
     <ul>
       <li><Link to={routes.DASHBOARD_ROUTE}>Dashboard</Link></li>
-      <li><Link to={routes.PROFILES_ROUTE}>Profile</Link></li>
+      <li><Link to={routes.PROFILE_ROUTE}>Profile</Link></li>
       </ul>;
 
     return loggedIn ? JSXLoggedIn : JSXNotLoggedIn;
