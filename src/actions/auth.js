@@ -15,7 +15,7 @@ export const removeToken = () => ({
 
 export const logout = () => {
   cookieDelete(TOKEN_COOKIE_KEY);
-  return removeToken;
+  return removeToken();
 };
 
 export const userSignup = user => (store) => {
