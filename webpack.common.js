@@ -17,7 +17,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: '36 Async Actions',
+    title: '37 Cookies and Profile',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),

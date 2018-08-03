@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import * as routes from '../../lib/routes';
 
-const mapStateToProps = store => ({
-  token: store.token,
+const mapStateToProps = state => ({
+  token: state.token,
 });
 
 class AuthRedirect extends React.Component {
   renderFinalDestination = (pathname, token) => {
-    const isRegisteredRoute = pathname === routes.SIGNUP_ROUTE || pathname === routes.LOGIN_ROUTE || pathname === routes.ROOT_ROUTE;
+    const isRegisteredRoute = pathname === routes.LOGIN_ROUTE || pathname === routes.SIGNUP_ROUTE || pathname === routes.ROOT_ROUTE;
 
     if (isRegisteredRoute) {
       if (token) {
