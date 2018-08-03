@@ -35,7 +35,8 @@ class Navbar extends React.Component {
   render() {
     const { loggedIn, doLogout } = this.props;
     return (
-      <header className="header">My Image Gallery
+      <header className="header">
+      <h1>Image Galleria</h1>
       <nav>
         { this.renderJSX(loggedIn) }
         </nav>
@@ -48,7 +49,7 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-  loggedIn: PropTypes.func,
+  loggedIn: PropTypes.bool,
   doLogout: PropTypes.func,
 };
 

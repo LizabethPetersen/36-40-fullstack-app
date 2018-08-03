@@ -1,5 +1,5 @@
 import React from 'react';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import * as profileActions from '../../actions/profile-actions';
@@ -43,7 +43,7 @@ class Profile extends React.Component {
   }
 
   handleUpdate = (profile) => {
-    this.props.updateProfile(profile);
+    this.props.updatedProfile(profile);
     this.setState({ editing: false });
   };
 
@@ -90,7 +90,7 @@ class Profile extends React.Component {
 Profile.propTypes = {
   profile: PropTypes.object,
   createProfile: PropTypes.func,
-  updateProfile: PropTypes.func,
+  updatedProfile: PropTypes.func,
   fetchProfile: PropTypes.func,
   history: PropTypes.object,
 };
