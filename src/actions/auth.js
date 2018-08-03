@@ -1,5 +1,8 @@
 import superagent from 'superagent';
 import * as routes from '../lib/routes';
+import { cookieDelete } from '../lib/utils';
+
+const TOKEN_COOKIE_KEY = 'L37-401d25-Token';
 
 export const setToken = token => ({
   type: 'TOKEN_SET',
@@ -9,6 +12,11 @@ export const setToken = token => ({
 export const removeToken = () => ({
   type: 'TOKEN_REMOVE',
 });
+
+export const logout = () => {
+  cookieDelete(TOKEN_COOKIE_KEY);
+  return removeToken;
+};
 
 export const userSignup = user => (store) => {
   return superagent.post(`${API_URL}${routes.SIGNUP_ROUTE}`)
