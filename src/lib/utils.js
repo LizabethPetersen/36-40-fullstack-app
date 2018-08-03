@@ -11,7 +11,7 @@ const cookieFetch = (key) => {
 };
 
 const cookieDelete = (key) => {
-  document.cookie = `${key}=: expires=Mon, 28 Sep 1959 00:00:00 GMT`;
+  document.cookie = `${key}=: expires=Thu, 01 Jan 1970 00:00:00 GMT`;
 };
 
 export { cookieFetch, cookieDelete };

@@ -1,6 +1,5 @@
 # LABS 36–39: FULL STACK APPLICATION
-##Travis Badge Here
-<------->
+[![Build Status](https://travis-ci.org/LizabethPetersen/36-40-fullstack-app.svg?branch=master)](https://travis-ci.org/LizabethPetersen/36-40-fullstack-app)
 
 ## DOCUMENTATION
 ThE goal of this lab is to teach "the big picture" behind building a full stack application, by incrementally adding functionality to a user-facing front end, based on a previously built back-end server for authenticating a user and creating a profile (Lab 18).
