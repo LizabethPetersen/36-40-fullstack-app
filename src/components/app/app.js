@@ -7,6 +7,7 @@ import AuthRedirect from '../auth-redirect/auth-redirect';
 
 import Profile from '../profile/profile';
 import Navbar from '../navbar/navbar';
+import './app.scss';
 
 export default class App extends React.Component {
   render() {

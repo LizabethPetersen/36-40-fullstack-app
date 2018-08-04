@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import AuthForm from '../auth-form/auth-form';
 import * as authActions from '../../actions/auth';
 import * as routes from '../../lib/routes';
+import './landing.scss';
 
 const mapStateToProps = store => ({
   token: store.token,
@@ -34,14 +35,14 @@ class Landing extends React.Component {
   }
 
   renderJSX = (pathname) => {
-    const rootJSX = // eslint-disable-line
-    <div>
-      <h2>Welcome</h2>
-      <ul>
-        <li><Link to="/signup">Sign Up</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
-    </div>;
+    // const rootJSX = // eslint-disable-line
+    // <div>
+    //   <h2>Welcome</h2>
+    //   <ul>
+    //     <li><Link to="/signup">Sign Up</Link></li>
+    //     <li><Link to="/login">Login</Link></li>
+    //   </ul>
+    // </div>;
 
     const signupJSX = // eslint-disable-line
     <div>
@@ -59,8 +60,8 @@ class Landing extends React.Component {
       <Link to="signup">Sign Up</Link>
     </div>;
     switch (pathname) {
-      case routes.ROOT_ROUTE:
-        return rootJSX;
+      // case routes.ROOT_ROUTE:
+      //   return rootJSX;
       case routes.SIGNUP_ROUTE:
         return signupJSX;
       case routes.LOGIN_ROUTE:

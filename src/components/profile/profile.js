@@ -6,6 +6,7 @@ import * as profileActions from '../../actions/profile-actions';
 import * as routes from '../../lib/routes';
 
 import ProfileForm from '../profile-form/profile-form';
+import './profile.scss';
 
 const mapStateToProps = state => ({
   profile: state.profile,

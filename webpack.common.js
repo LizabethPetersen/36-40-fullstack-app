@@ -17,10 +17,11 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: '37 Cookies and Profile',
+    title: '38 Google OAuth 2.0',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
+    GOOGLE_OAUTH_ID: JSON.stringify(process.env.GOOGLE_OAUTH_ID),
   }),
 ];
 
