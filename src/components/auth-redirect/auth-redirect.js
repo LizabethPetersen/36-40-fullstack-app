@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import * as routes from '../../lib/routes';
+import './auth-redirect.scss';
 
 const mapStateToProps = state => ({
   token: state.token,
