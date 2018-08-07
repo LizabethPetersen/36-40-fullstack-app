@@ -17,7 +17,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: '38 Google OAuth 2.0',
+    title: '39 File-Reader API and uploading to an AWS bucket',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
@@ -29,7 +29,7 @@ webpackConfig.module = {};
 
 webpackConfig.module.rules = [
   {
-    test: /\.(png|svg|jpg|gif)$/i,
+    test: /\.(png|svg|jpg|gif|mp3|flac|wav|mp4)$/i,
     use: ['file-loader'],
   },
   {
