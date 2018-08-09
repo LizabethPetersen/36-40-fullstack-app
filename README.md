@@ -20,4 +20,4 @@ Navbar = Contains the JSX for showing the links to the different signup options
 Builds in a cookie for session storage. Adds a profile route and form for user to input a bio and their name. Adds a navigation bar for ease in functionality.
 
 ### Lab 38: Google Authentication
-Includes a link to the Google+ API to allow a user to signup using their google account.
+Includes a button that links to the Google+ API to allow a user to sign up using their google account.
