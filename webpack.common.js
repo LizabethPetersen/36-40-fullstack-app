@@ -17,7 +17,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: '39 File-Reader API and uploading to an AWS bucket',
+    title: 'Lab 40: Deployment and Amazon CDN',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
