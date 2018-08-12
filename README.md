@@ -21,3 +21,9 @@ Builds in a cookie for session storage. Adds a profile route and form for user t
 
 ### Lab 38: Google Authentication
 Includes a button that links to the Google+ API to allow a user to sign up using their google account.
+
+### Lab 39: File Reader API
+Includes a form for uploading images to our app, saving them in an Amazon S3 bucket, and then creating a list with thumbnails for the images for reference.
+
+### Lab 40: Deployment
+This lab connects our front end with Heroku, and back end with Amazon CDN.

@@ -1,9 +1,12 @@
 @import '../../style/vars';
 
 .dashboard {
+  padding-top: 20px;
+  
   h3 {
     color: $color-highlight,
   }
+
   img {
     width: 50%,
   }
