@@ -27,3 +27,6 @@ Includes a form for uploading images to our app, saving them in an Amazon S3 buc
 
 ### Lab 40: Deployment
 This lab connects our front end with Heroku, and back end with Amazon CDN.
+
+### Lab 41: Form Validation
+User will see error messages for inputting incomplete or incorrect data in the form. 

@@ -17,7 +17,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'Lab 40: Deployment and Amazon CDN',
+    title: 'Lab 41: Deployment and Amazon CDN',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
